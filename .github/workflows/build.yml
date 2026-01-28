@@ -1,0 +1,42 @@
+name: Build Controls
+
+# This workflow builds the iNKORE.UI.WPF.Modern.Controls and iNKORE.UI.WPF.Modern.Gallery projects and uploads the artifacts for use in other workflows or releases.
+
+on:
+  push:
+    branches: [  ]
+  pull_request:
+    branches: [  ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: |
+          10.x.x
+
+    - name: Restore NuGet packages
+      run: |
+        dotnet restore Avalonia.NC.Controls.slnx
+
+    - name: Build solution
+      run: |
+        dotnet build -c Release Avalonia.NC.Controls.slnx
+
+    - name: Upload Controls artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: dotnet Avalonia.NC.Controls
+        path: src\Avalonia.NC.Controls\bin\Release\netstandard2.0
