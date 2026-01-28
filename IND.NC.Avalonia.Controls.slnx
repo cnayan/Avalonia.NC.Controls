@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/SolutionItems/">
+    <File Path="../../../LICENSE" />
+    <File Path="../../../README.md" />
+  </Folder>
+  <Folder Name="/SolutionItems/.github/" />
+  <Folder Name="/SolutionItems/.github/workflows/">
+    <File Path=".github/workflows/build.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/IND.NC.Avalonia.Controls/IND.NC.Avalonia.Controls.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>

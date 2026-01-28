@@ -1,10 +1,11 @@
-﻿using Avalonia.Controls;
+﻿using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Input;
 using Avalonia.Layout;
 using Avalonia.Utilities;
 using static System.Math;
 
-namespace Avalonia.NC.Controls;
+namespace IND.NC.Avalonia.Controls;
 
 public sealed class WrapPanel2D : WrapPanel, INavigableContainer
 {
