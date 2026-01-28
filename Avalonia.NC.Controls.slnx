@@ -6,4 +6,5 @@
   <Folder Name="/src/">
     <Project Path="src/Avalonia.NC.Controls/Avalonia.NC.Controls.csproj" />
   </Folder>
+  <Folder Name="/tests/" />
 </Solution>
