@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/SolutionItems/">
+    <File Path="../../../LICENSE" />
+    <File Path="../../../README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Avalonia.WrapPanel2D/Avalonia.NC.Controls.csproj" />
+  </Folder>
+</Solution>
